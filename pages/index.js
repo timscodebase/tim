@@ -1,65 +1,109 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styled from "styled-components";
+import DiagonalContent from "./components/DiagonalContent";
+
+const Header = styled.header`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10rem 0 8rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: var(--dark-highlight);
+  border-bottom: 4px solid var(--header-color);
+
+  h1 {
+    display: block;
+    color: transparent;
+    background: linear-gradient(135deg, rgb(230, 176, 0), rgb(255, 18, 6));
+    background-clip: text;
+  }
+
+  h1,
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: -20%;
+    transform: skewy(-8deg);
+
+    h1,
+    p {
+      transform: skewy(8deg);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+    margin-top: -10%;
+    transform: skewy(-4deg);
+
+    h1,
+    p {
+      transform: skewy(4deg);
+    }
+  }
+
+  @media (min-width: 1001px) {
+    display: block;
+    margin-top: -10%;
+    transform: skewy(-2deg);
+
+    h1,
+    p {
+      transform: skewy(2deg);
+    }
+  }
+`;
+
+const Content = styled.section`
+  font-size: 2rem;
+  padding: 3rem;
+
+  p {
+    text-align: justify;
+  }
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Tim Smith</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main>
+        <Header>
+          <h1>Tim Smith</h1>
+          <p>Frontend Web Developer</p>
+        </Header>
+        <Content>
+          <p>
+            My passion in life is meeting great new people and learning as much
+            as I can about the many things I love! Every day, I find new
+            inspiring things that motivate me to keep moving forward in life and
+            to continue my search for my purpose in life. I believe that my
+            Higher Power put me on this Earth to learn and inspire people to
+            love life.
+          </p>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <DiagonalContent>
+            <p>Test</p>
+          </DiagonalContent>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          <DiagonalContent>
+            <p>Test</p>
+          </DiagonalContent>
+        </Content>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <footer></footer>
+    </>
+  );
 }
