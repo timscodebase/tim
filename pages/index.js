@@ -19,6 +19,8 @@ const Header = styled.header`
     color: transparent;
     background: linear-gradient(135deg, rgb(230, 176, 0), rgb(255, 18, 6));
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   h1,
@@ -93,11 +95,19 @@ export default function Home() {
             love life.
           </p>
 
-          <DiagonalContent>
+          <DiagonalContent id="projects">
             <p>Test</p>
           </DiagonalContent>
 
-          <DiagonalContent>
+          <DiagonalContent id="education">
+            <p>Test</p>
+          </DiagonalContent>
+
+          <DiagonalContent id="contact">
+            <p>Test</p>
+          </DiagonalContent>
+
+          <DiagonalContent id="about-me">
             <p>Test</p>
           </DiagonalContent>
         </Content>

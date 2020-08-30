@@ -46,10 +46,15 @@ const Diagonal = styled.div`
   }
 `;
 
-export default function DiagonalContent({ children }) {
-  return <Diagonal>{children}</Diagonal>;
+export default function DiagonalContent({ children, id }) {
+  return (
+    <Diagonal>
+      <div id={id}>{children}</div>
+    </Diagonal>
+  );
 }
 
 DiagonalContent.propTypes = {
   children: PropTypes.object,
+  id: PropTypes.string,
 };

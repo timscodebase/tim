@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import MenuItem from "./MenuItem";
 import {
@@ -7,45 +8,49 @@ import {
   faUserGraduate,
 } from "@fortawesome/free-solid-svg-icons";
 
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
-
-export default function Navigation() {
+export default function Navigation({ toggle }) {
   return (
-    <motion.ul variants={variants}>
+    <ul>
       {items.map((item, i) => {
         const { icon, link, name } = item;
-        return <MenuItem i={i} key={i} icon={icon} link={link} name={name} />;
+        return (
+          <MenuItem
+            toggle={toggle}
+            i={i}
+            key={i}
+            icon={icon}
+            link={link}
+            name={name}
+          />
+        );
       })}
-    </motion.ul>
+    </ul>
   );
 }
+
+Navigation.propTypes = {
+  toggle: PropTypes.func,
+};
 
 const items = [
   {
     icon: faPalette,
-    link: "",
+    link: "#projects",
     name: "Projects",
   },
   {
     icon: faUserGraduate,
-    link: "",
-    name: "My Education",
+    link: "#education",
+    name: "Education",
   },
   {
     icon: faAddressCard,
-    link: "",
+    link: "#contact",
     name: "Contact",
   },
   {
     icon: faHeart,
-    link: "",
+    link: "#about-me",
     name: "About Me",
   },
   {

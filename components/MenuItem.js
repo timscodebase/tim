@@ -29,7 +29,7 @@ const colors = [
   "rgb(251, 46, 5)",
 ];
 
-export default function MenuItem({ i, icon, link, name }) {
+export default function MenuItem({ i, icon, link, name, toggle }) {
   const style = { color: `${colors[i]}` };
   if (i < 4) {
     return (
@@ -40,7 +40,12 @@ export default function MenuItem({ i, icon, link, name }) {
       >
         <div className="wrapper">
           <FontAwesomeIcon icon={icon} style={style} />
-          <a href={link} className="text-placeholder" style={style}>
+          <a
+            onClick={toggle}
+            href={link}
+            className="text-placeholder"
+            style={style}
+          >
             {name}
           </a>
         </div>
@@ -53,7 +58,6 @@ export default function MenuItem({ i, icon, link, name }) {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <FontAwesomeIcon icon={icon} style={style} />
       <SocialLinks i={i} colors={colors} />
     </motion.li>
   );
@@ -64,4 +68,5 @@ MenuItem.propTypes = {
   icon: PropTypes.object,
   link: PropTypes.string,
   name: PropTypes.string,
+  toogle: PropTypes.func,
 };

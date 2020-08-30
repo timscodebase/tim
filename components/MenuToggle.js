@@ -13,7 +13,7 @@ const Path = (props) => (
 
 export default function MenuToggle({ toggle }) {
   return (
-    <button onClick={toggle}>
+    <button aria-label="Toggle Menu" className="fixed" onClick={toggle}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           variants={{
@@ -41,5 +41,5 @@ export default function MenuToggle({ toggle }) {
 }
 
 MenuToggle.propTypes = {
-  toggle: PropTypes.bool,
+  toggle: PropTypes.func,
 };
