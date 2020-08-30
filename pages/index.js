@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-import DiagonalContent from "./components/DiagonalContent";
+import DiagonalContent from "../components/DiagonalContent";
 
 const Header = styled.header`
   display: flex;

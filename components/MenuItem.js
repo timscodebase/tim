@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -28,7 +29,7 @@ const colors = [
   "rgb(251, 46, 5)",
 ];
 
-export const MenuItem = ({ i, icon, link, name }) => {
+export default function MenuItem({ i, icon, link, name }) {
   const style = { color: `${colors[i]}` };
   if (i < 4) {
     return (
@@ -56,4 +57,11 @@ export const MenuItem = ({ i, icon, link, name }) => {
       <SocialLinks i={i} colors={colors} />
     </motion.li>
   );
+}
+
+MenuItem.propTypes = {
+  i: PropTypes.number,
+  icon: PropTypes.object,
+  link: PropTypes.string,
+  name: PropTypes.string,
 };

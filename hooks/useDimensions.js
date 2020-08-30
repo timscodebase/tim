@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
 
 // Naive implementation - in reality would want to attach
@@ -13,4 +14,8 @@ export const useDimensions = (ref) => {
   }, []);
 
   return dimensions.current;
+};
+
+useDimensions.PropTypes = {
+  ref: PropTypes.object,
 };

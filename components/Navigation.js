@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-import { MenuItem } from "./MenuItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MenuItem from "./MenuItem";
 import {
   faAddressCard,
   faHeart,
   faPalette,
-  faShareAlt,
   faUserGraduate,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,14 +16,16 @@ const variants = {
   },
 };
 
-export const Navigation = () => (
-  <motion.ul variants={variants}>
-    {items.map((item, i) => {
-      const { icon, link, name } = item;
-      return <MenuItem i={i} key={i} icon={icon} link={link} name={name} />;
-    })}
-  </motion.ul>
-);
+export default function Navigation() {
+  return (
+    <motion.ul variants={variants}>
+      {items.map((item, i) => {
+        const { icon, link, name } = item;
+        return <MenuItem i={i} key={i} icon={icon} link={link} name={name} />;
+      })}
+    </motion.ul>
+  );
+}
 
 const items = [
   {

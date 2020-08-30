@@ -2,8 +2,8 @@ import { useRef } from "react";
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "../hooks/useDimensions";
-import { MenuToggle } from "./MenuToggle";
-import { Navigation } from "./Navigation";
+import MenuToggle from "./MenuToggle";
+import Navigation from "./Navigation";
 
 const StyledNav = styled.div`
   position: absolute;

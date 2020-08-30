@@ -11,16 +11,16 @@ const StyledSocialLinks = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: ${({ colors, i }) => colors[i]};
+  color: rgb(251, 46, 5);
 
   svg {
     font-size: 4rem;
   }
 `;
 
-export default function SocialLinks({ colors, i }) {
+export default function SocialLinks() {
   return (
-    <StyledSocialLinks colors={colors} i={i}>
+    <StyledSocialLinks>
       <a href="https://github.com/timscodebase">
         <FontAwesomeIcon icon={faGithub} />
       </a>
