@@ -7,6 +7,8 @@ import SocialLinks from "./SocialLinks";
 const variants = {
   open: {
     y: 0,
+    height: "80px",
+    width: "100%",
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },

@@ -11,6 +11,7 @@ import {
 const variants = {
   open: {
     opacity: 1,
+    width: "100vw",
   },
   closed: {
     height: 0,
