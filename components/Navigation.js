@@ -8,9 +8,20 @@ import {
   faUserGraduate,
 } from "@fortawesome/free-solid-svg-icons";
 
+const variants = {
+  open: {
+    opacity: 1,
+  },
+  closed: {
+    height: 0,
+    width: 0,
+    opacity: 0,
+  },
+};
+
 export default function Navigation({ toggle }) {
   return (
-    <ul>
+    <motion.ul variants={variants} className="navigation">
       {items.map((item, i) => {
         const { icon, link, name } = item;
         return (
@@ -24,7 +35,7 @@ export default function Navigation({ toggle }) {
           />
         );
       })}
-    </ul>
+    </motion.ul>
   );
 }
 
@@ -45,8 +56,8 @@ const items = [
   },
   {
     icon: faAddressCard,
-    link: "#contact",
-    name: "Contact",
+    link: "#contact-me",
+    name: "Contact Me",
   },
   {
     icon: faHeart,

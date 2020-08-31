@@ -41,7 +41,7 @@ li {
   padding: 0;
 }
 
-ul {
+.navigation {
   padding: 25px;
   position: fixed;
   top: 60px;

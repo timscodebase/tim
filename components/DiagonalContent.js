@@ -15,6 +15,12 @@ const Diagonal = styled.div`
   border-bottom: 4px solid var(--header-color);
   font-weight: bold;
 
+  div {
+    width: 100%;
+    text-align: center;
+    padding: 0 3rem;
+  }
+
   p {
     margin: 0;
     padding: 0;
@@ -55,6 +61,6 @@ export default function DiagonalContent({ children, id }) {
 }
 
 DiagonalContent.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
   id: PropTypes.string,
 };

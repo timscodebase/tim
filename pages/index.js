@@ -1,27 +1,19 @@
 import Head from "next/head";
 import styled from "styled-components";
+
 import DiagonalContent from "../components/DiagonalContent";
+import Project from "../components/Project";
 
 const Header = styled.header`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   position: relative;
   padding: 10rem 0 8rem 0;
   font-size: 3rem;
   font-weight: bold;
   background-color: var(--dark-highlight);
   border-bottom: 4px solid var(--header-color);
-
-  h1 {
-    display: block;
-    color: transparent;
-    background: linear-gradient(135deg, rgb(230, 176, 0), rgb(255, 18, 6));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 
   h1,
   p {
@@ -34,7 +26,6 @@ const Header = styled.header`
     margin-top: -20%;
     transform: skewy(-8deg);
 
-    h1,
     p {
       transform: skewy(8deg);
     }
@@ -45,7 +36,6 @@ const Header = styled.header`
     margin-top: -10%;
     transform: skewy(-4deg);
 
-    h1,
     p {
       transform: skewy(4deg);
     }
@@ -56,7 +46,6 @@ const Header = styled.header`
     margin-top: -10%;
     transform: skewy(-2deg);
 
-    h1,
     p {
       transform: skewy(2deg);
     }
@@ -96,18 +85,32 @@ export default function Home() {
           </p>
 
           <DiagonalContent id="projects">
-            <p>Test</p>
+            <h2>Projects</h2>
+            <ul>
+              {Projects.map(({ title, desc, webLink, githubLink }) => (
+                <Project
+                  key={title}
+                  title={title}
+                  desc={desc}
+                  webLink={webLink}
+                  githubLink={githubLink}
+                />
+              ))}
+            </ul>
           </DiagonalContent>
 
           <DiagonalContent id="education">
+            <h2>Education</h2>
             <p>Test</p>
           </DiagonalContent>
 
-          <DiagonalContent id="contact">
+          <DiagonalContent id="contact-me">
+            <h2>Contact Me</h2>
             <p>Test</p>
           </DiagonalContent>
 
           <DiagonalContent id="about-me">
+            <h2>About Me</h2>
             <p>Test</p>
           </DiagonalContent>
         </Content>
@@ -117,3 +120,27 @@ export default function Home() {
     </>
   );
 }
+
+const Projects = [
+  {
+    title: "Helldonix",
+    desc:
+      "A fun dictionary app I am building to keep track of the silly words my wife makes up.",
+    webLink: "https://hellbonix.netlify.app",
+    githubLink: "https://github.com/timscodebase/hellbonix",
+  },
+  {
+    title: "United States COVID-19 Data",
+    desc:
+      "A fun dictionary app I am building to keep track of the silly words my wife makes up.",
+    webLink: "https://us-covid-19-data.netlify.app/",
+    githubLink: "https://github.com/timscodebase/covid",
+  },
+  {
+    title: "Me and My Song",
+    desc:
+      "A custom built Wordpress template for an SF Bay Area Singer/Song Writer",
+    webLink: "https://hellbonix.netlify.app",
+    githubLink: "https://github.com/timscodebase/hellbonix",
+  },
+];
