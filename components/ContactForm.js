@@ -2,6 +2,14 @@ import styled from "styled-components";
 
 const StyledContactForm = styled.div`
   margin-bottom: 2rem;
+  text-align: left;
+
+  button {
+    position: revert;
+    padding: 0.75rem;
+    color: var(--dark-highlight);
+    background: linear-gradient(135deg, rgb(230, 176, 0), rgb(255, 18, 6));
+  }
 `;
 
 export default function ContactForm() {
@@ -24,7 +32,9 @@ export default function ContactForm() {
         <p>
           <textarea type="text" name="message" placeholder="Message" />
         </p>
-        <button onSubmit={handleSubmit}>Submit</button>
+        <button className="skewy" onSubmit={handleSubmit}>
+          Submit
+        </button>
       </form>
     </StyledContactForm>
   );

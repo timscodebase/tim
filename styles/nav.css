@@ -15,7 +15,7 @@ nav {
   background: #fff;
 }
 
-button {
+.nav-button {
   outline: none;
   border: none;
   -webkit-user-select: none;

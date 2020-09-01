@@ -73,7 +73,7 @@ export default function Home() {
 
       <main>
         <Header>
-          <h1>Tim Smith</h1>
+          <h1 className="skewy">Tim Smith</h1>
           <p>Frontend Web Developer</p>
         </Header>
         <MainContent>
