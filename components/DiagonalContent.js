@@ -3,19 +3,17 @@ import styled from "styled-components";
 
 const Diagonal = styled.div`
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   justify-content: center;
   align-items: center;
-  padding: 6rem 0;
+  padding: 1rem 0;
   margin: 0 -3rem 3rem -3rem;
   font-size: 2rem;
   background-color: var(--dark-highlight);
   border-top: 4px solid var(--header-color);
   border-bottom: 4px solid var(--header-color);
-  font-weight: bold;
 
-  div {
+  .padding {
     width: 100%;
     text-align: center;
     padding: 0 3rem;
@@ -55,7 +53,9 @@ const Diagonal = styled.div`
 export default function DiagonalContent({ children, id }) {
   return (
     <Diagonal>
-      <div id={id}>{children}</div>
+      <div className="padding" id={id}>
+        {children}
+      </div>
     </Diagonal>
   );
 }

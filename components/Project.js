@@ -6,7 +6,7 @@ export default function Project({ title, desc, webLink, githubLink }) {
   console.log({ webLink, githubLink });
   return (
     <li>
-      <h3 className="align-left">{title}</h3>
+      <h3 className="skewy align-left">{title}</h3>
       <p>{desc}</p>
       <div className="project-links">
         <a href={webLink} target="_blank" rel="noopener noreferrer nofollow">

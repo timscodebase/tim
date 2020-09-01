@@ -1,8 +1,17 @@
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
-const StyledFooter = styled.footer``;
+const StyledFooter = styled.footer`
+  font-size: 2rem;
+  padding: 3rem;
+  background-color: var(--dark-highlight);
+  border-top: 4px solid var(--header-color);
+`;
 
 export default function Footer() {
-  return <p>hi</p>;
+  return (
+    <StyledFooter>
+      <p>hi</p>
+    </StyledFooter>
+  );
 }

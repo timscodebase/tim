@@ -7,9 +7,11 @@ body {
   margin: 0;
   color: var(--text-color);
   background-color: var(--background-color);
+  background: linear-gradient(100deg, rgb(40, 40, 40), rgb(20, 20, 20));
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 h1,
@@ -43,7 +45,7 @@ h3 {
 
 .project-links svg {
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  margin-right: 0.75rem;
 }
 
 a {
@@ -57,6 +59,16 @@ a {
   box-sizing: border-box;
 }
 
+input,
+textarea {
+  width: 100%;
+  margin-top: 0.75rem;
+  border-radius: 0;
+  padding: 0.75rem;
+  border: 0;
+  outline: 0;
+}
+
 @import "nav.css";
 
 @media (max-width: 500px) {
@@ -64,12 +76,7 @@ a {
     transform: skewy(8deg);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .skewy {
     transform: skewy(8deg);
   }
 }
@@ -79,12 +86,7 @@ a {
     transform: skewy(4deg);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .skewy {
     transform: skewy(4deg);
   }
 }
@@ -94,12 +96,7 @@ a {
     transform: skewy(2deg);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .skewy {
     transform: skewy(2deg);
   }
 }

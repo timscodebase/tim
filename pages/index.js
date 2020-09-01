@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styled from "styled-components";
 
+import Content from "../components/Content";
+import ContactForm from "../components/ContactForm";
 import DiagonalContent from "../components/DiagonalContent";
 import Project from "../components/Project";
 
@@ -52,7 +54,7 @@ const Header = styled.header`
   }
 `;
 
-const Content = styled.section`
+const MainContent = styled.section`
   font-size: 2rem;
   padding: 3rem;
 
@@ -74,7 +76,7 @@ export default function Home() {
           <h1>Tim Smith</h1>
           <p>Frontend Web Developer</p>
         </Header>
-        <Content>
+        <MainContent>
           <p>
             My passion in life is meeting great new people and learning as much
             as I can about the many things I love! Every day, I find new
@@ -85,7 +87,7 @@ export default function Home() {
           </p>
 
           <DiagonalContent id="projects">
-            <h2>Projects</h2>
+            <h2 className="skewy">Projects</h2>
             <ul>
               {Projects.map(({ title, desc, webLink, githubLink }) => (
                 <Project
@@ -100,20 +102,21 @@ export default function Home() {
           </DiagonalContent>
 
           <DiagonalContent id="education">
-            <h2>Education</h2>
+            <h2 className="skewy">Education</h2>
             <p>Test</p>
           </DiagonalContent>
 
           <DiagonalContent id="contact-me">
-            <h2>Contact Me</h2>
+            <h2 className="skewy">Contact Me</h2>
             <p>Test</p>
+            <ContactForm />
           </DiagonalContent>
 
-          <DiagonalContent id="about-me">
+          <Content id="about-me">
             <h2>About Me</h2>
             <p>Test</p>
-          </DiagonalContent>
-        </Content>
+          </Content>
+        </MainContent>
       </main>
 
       <footer></footer>
