@@ -6,7 +6,7 @@ const variants = {
   open: {
     y: 0,
     height: "80px",
-    width: "100vw",
+    width: "100%",
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },
@@ -35,6 +35,7 @@ export default function MenuItem({ i, icon, link, name, toggle }) {
   const style = { color: `${colors[i]}` };
   return (
     <motion.li
+      className="nav-list"
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}

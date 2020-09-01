@@ -126,7 +126,7 @@ export default function Home() {
 
 const Projects = [
   {
-    title: "Helldonix",
+    title: "Hellbonix",
     desc:
       "A fun dictionary app I am building to keep track of the silly words my wife makes up.",
     webLink: "https://hellbonix.netlify.app",

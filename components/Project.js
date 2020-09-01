@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Project({ title, desc, webLink, githubLink }) {
-  console.log({ webLink, githubLink });
   return (
     <li>
       <h3 className="skewy align-left">{title}</h3>

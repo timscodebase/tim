@@ -48,7 +48,7 @@ li {
   margin-top: -4rem;
 }
 
-li {
+li.nav-list {
   list-style: none;
   margin-bottom: 20px;
   display: block;
@@ -59,13 +59,13 @@ li {
   margin: 0px -25px;
 }
 
-li .wrapper {
+.nav-list > .wrapper {
   display: flex;
   font-size: 3rem;
   align-items: center;
 }
 
-li .wrapper svg {
+.nav-list .wrapper svg {
   font-size: 2.5rem;
   margin-right: 2rem;
 }
