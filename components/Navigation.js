@@ -65,9 +65,4 @@ const items = [
     link: "#about-me",
     name: "About Me",
   },
-  {
-    icon: "",
-    link: "",
-    name: "",
-  },
 ];

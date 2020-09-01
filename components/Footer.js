@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { motion, useCycle } from "framer-motion";
 
+import SocialLinks from "./SocialLinks";
+
 const StyledFooter = styled.footer`
   font-size: 2rem;
   padding: 3rem;
@@ -12,6 +14,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <p>hi</p>
+      <SocialLinks />
     </StyledFooter>
   );
 }

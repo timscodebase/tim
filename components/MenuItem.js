@@ -2,8 +2,6 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import SocialLinks from "./SocialLinks";
-
 const variants = {
   open: {
     y: 0,
@@ -35,34 +33,23 @@ const colors = [
 
 export default function MenuItem({ i, icon, link, name, toggle }) {
   const style = { color: `${colors[i]}` };
-  if (i < 4) {
-    return (
-      <motion.li
-        variants={variants}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <div className="wrapper">
-          <FontAwesomeIcon icon={icon} style={style} />
-          <a
-            onClick={toggle}
-            href={link}
-            className="text-placeholder"
-            style={style}
-          >
-            {name}
-          </a>
-        </div>
-      </motion.li>
-    );
-  }
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <SocialLinks i={i} colors={colors} />
+      <div className="wrapper">
+        <FontAwesomeIcon icon={icon} style={style} />
+        <a
+          onClick={toggle}
+          href={link}
+          className="text-placeholder"
+          style={style}
+        >
+          {name}
+        </a>
+      </div>
     </motion.li>
   );
 }
