@@ -24,7 +24,7 @@ export default function ContactForm() {
         <p>
           <textarea type="text" name="message" placeholder="Message" />
         </p>
-        <button onSubmit={handleSubmit} />
+        <button onSubmit={handleSubmit}>Submit</button>
       </form>
     </StyledContactForm>
   );
