@@ -19,6 +19,7 @@ const sidebar = {
     },
   }),
   closed: {
+    zIndex: -3,
     transition: {
       delay: 0.5,
       type: "spring",

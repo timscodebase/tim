@@ -16,7 +16,7 @@ const Diagonal = styled.div`
   .padding {
     width: 100%;
     text-align: center;
-    padding: 0 3rem;
+    padding: 0 1.5rem;
   }
 
   p {
