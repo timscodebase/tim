@@ -12,11 +12,13 @@ const variants = {
   open: {
     opacity: 1,
     width: "100vw",
+    overflow: "initial",
   },
   closed: {
     height: 0,
     width: 0,
     opacity: 0,
+    overflow: "hidden",
   },
 };
 

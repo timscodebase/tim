@@ -15,8 +15,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: "Cinzel", serif;
   display: block;
   color: transparent;
@@ -27,7 +26,13 @@ h3 {
 }
 
 h3 {
+  font-size: 3.2rem;
   margin: 0.75rem 0 -1rem 0;
+}
+
+h4 {
+  color: var(--header-color);
+  margin-bottom: 0.5rem;
 }
 
 li {
@@ -72,11 +77,6 @@ li {
   color: var(--header-color);
 }
 
-h4 {
-  color: var(--header-color);
-  margin-bottom: 0.5rem;
-}
-
 .education-links > a {
   text-decoration: dotted !important;
 }
@@ -103,14 +103,15 @@ textarea {
   margin-top: 0.75rem;
   border-radius: 0;
   padding: 0.75rem;
-  border: 0;
   outline: 0;
+  border: 2px solid var(--header-color);
 }
 
 button {
   border: 0;
   outline: 0;
   user-select: none;
+  font-weight: bold;
 }
 
 @import "nav.css";
@@ -136,6 +137,11 @@ button {
     transform: skewy(4deg);
   }
 
+  h3,
+  .education-links {
+    transform: skewy(3.5deg);
+  }
+
   .skewy {
     transform: skewy(4deg);
   }
@@ -144,6 +150,11 @@ button {
 @media (min-width: 1001px) {
   .project-links {
     transform: skewy(2deg);
+  }
+
+  h3,
+  .education-links {
+    transform: skewy(2.03deg);
   }
 
   .skewy {

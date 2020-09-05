@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
+const StyledEducation = styled.li`
+  padding: 1.5rem;
+`;
 export default function Education({ desc, link, name }) {
   return (
-    <li>
+    <StyledEducation>
       <h4 className="skewy align-left">{name}</h4>
       <p>{desc}</p>
       <div className="education-links">
@@ -13,7 +17,7 @@ export default function Education({ desc, link, name }) {
           Learn more
         </a>
       </div>
-    </li>
+    </StyledEducation>
   );
 }
 
