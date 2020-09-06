@@ -6,8 +6,10 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 const Wrapper = styled.div`
-  @media (max-width: 500px) {
-    width: 100%;
+  @media (min-width: 1001px) {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
   }
 
   @media (max-width: 1000px) {
@@ -16,10 +18,8 @@ const Wrapper = styled.div`
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
   }
 
-  @media (min-width: 1001px) {
-    width: 75%;
-    margin: 0 auto;
-    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+  @media (max-width: 500px) {
+    width: 100%;
   }
 `;
 
