@@ -18,6 +18,7 @@ const MainContent = styled.section`
 
 const Grid = styled.ul`
   display: grid;
+  grid-template-columns: 1fr;
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.25);
 
