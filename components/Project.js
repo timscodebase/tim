@@ -5,7 +5,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 export default function Project({ title, desc, webLink, githubLink }) {
   return (
     <li>
-      <h3 className="skewy align-left">{title}</h3>
+      <h3 className="skewy align-left margin-bottom">{title}</h3>
       <p>{desc}</p>
       <div className="project-links">
         <a href={webLink} target="_blank" rel="noopener noreferrer nofollow">

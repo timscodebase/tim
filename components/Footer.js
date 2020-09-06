@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { motion, useCycle } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import SocialLinks from "./SocialLinks";
 
@@ -28,6 +29,11 @@ export default function Footer() {
         <p>Tim Smith &copy; {new Date().getFullYear()}</p>
       </div>
       <SocialLinks />
+      <div>
+        <p>
+          Made with <FontAwesomeIcon icon={faHeart} />
+        </p>
+      </div>
     </StyledFooter>
   );
 }

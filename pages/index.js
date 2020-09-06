@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <main>
         <MainContent>
-          <p>
+          <p className="padding">
             My passion in life is meeting great new people and learning as much
             as I can about the many things I love! Every day, I find new
             inspiring things that motivate me to keep moving forward in life and
