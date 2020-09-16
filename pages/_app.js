@@ -1,32 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
+import Layout from "./templates/Layout";
 import ThemeContext from "../contexts/ThemeContext";
 
 import "../styles/globals.css";
-
-import Layout from "./templates/Layout";
+import { initGA, logPageView } from "../lib/googleAnalytics"
 
 export default function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("dark");
 
-  // const startTime = "08:00:00";
-  // const endTime = "20:00:00";
+  
 
-  // const currentDate = new Date();
+  useEffect(() => {
+    // load google analytics
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
 
-  // const startDate = new Date(currentDate.getTime());
-  // startDate.setHours(startTime.split(":")[0]);
-  // startDate.setMinutes(startTime.split(":")[1]);
-  // startDate.setSeconds(startTime.split(":")[2]);
+    // set theme based on time of day
+    const startTime = "08:00:00";
+    const endTime = "20:00:00";
 
-  // const endDate = new Date(currentDate.getTime());
-  // endDate.setHours(endTime.split(":")[0]);
-  // endDate.setMinutes(endTime.split(":")[1]);
-  // endDate.setSeconds(endTime.split(":")[2]);
+    const currentDate = new Date();
 
-  // if (startDate < currentDate && endDate > currentDate) {
-  //   setTheme("light");
-  // }
+    const startDate = new Date(currentDate.getTime());
+    startDate.setHours(startTime.split(":")[0]);
+    startDate.setMinutes(startTime.split(":")[1]);
+    startDate.setSeconds(startTime.split(":")[2]);
+
+    const endDate = new Date(currentDate.getTime());
+    endDate.setHours(endTime.split(":")[0]);
+    endDate.setMinutes(endTime.split(":")[1]);
+    endDate.setSeconds(endTime.split(":")[2]);
+
+    if (startDate < currentDate && endDate > currentDate) {
+      setTheme("light");
+    }
+  }, [])
 
   const context = { theme, setTheme };
   return (
@@ -36,4 +48,13 @@ export default function MyApp({ Component, pageProps }) {
       </Layout>
     </ThemeContext.Provider>
   );
+}
+
+export function reportWebVitals(metric) {
+  console.log('====================================');
+  console.log('Tim Smith Site Metric');
+  console.log(metric);
+  console.log('====================================');
+  
+  metric.label === "web-vital" && console.log(metric);
 }
