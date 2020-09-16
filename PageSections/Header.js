@@ -37,9 +37,10 @@ const StyledHeader = styled.header`
 
   @media (max-width: 500px) {
     background: linear-gradient(
-        var(--dark-highlight-transparent),
-        var(--dark-highlight)
-      ),
+      var(--dark-highlight-transparent),
+      ${(props) =>
+        props.theme === "light" ? "transparent" : "var(--background-color)"}
+    ),
       url(https://res.cloudinary.com/the-classic-lunchbox/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1599606608/mt-hood_vzifsl.png);
     margin-top: -20%;
     transform: skewy(-8deg);
