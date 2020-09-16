@@ -1,12 +1,8 @@
-import groq from "groq";
 import DiagonalContent from "../Components/DiagonalContent";
 import Grid from "./Styles/Grid";
 import Project from "../Components/Project";
 
-const projectsQuery = `*[_type == "project"]`;
-
-const Projects = (props) => {
-  console.log(props);
+export default function Projects() {
   return (
     <DiagonalContent key="projects" id="projects">
       <h2 className="skewy">Projects</h2>
@@ -23,13 +19,7 @@ const Projects = (props) => {
       </Grid>
     </DiagonalContent>
   );
-};
-
-Projects.getInitialProps = async function () {
-  return await client.fetch(groq`*[_type == "project"]`);
-};
-
-export default Projects;
+}
 
 const MyProjects = [
   {

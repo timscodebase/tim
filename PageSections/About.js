@@ -1,14 +1,34 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import Content from "../Components/Content";
+
+// Context
+import ThemeContext from "../contexts/ThemeContext";
 
 const H2Wrapper = styled.div`
   width: 270px;
   margin: 0 auto;
   padding: 1.5rem !important;
-  background: var(--dark-highlight);
+  transition: all 0.5s ease-in;
+  background: ${(props) =>
+    props.theme === "light" ? "transparent" : "var(--dark-highlight)"};
 
   h2 {
     margin: 0;
+    color: transparent;
+    transition: all 0.5s ease-in;
+    background: linear-gradient(
+      135deg,
+      ${(props) =>
+        props.theme === "light" ? "var(--dark-highlight)" : "rgb(230, 176, 0)"},
+      ${(props) =>
+        props.theme === "light"
+          ? "var(--dark-highlight)"
+          : "rgb(211, 11, 0) 80%"}
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   @media (max-width: 500px) {
@@ -37,9 +57,10 @@ const H2Wrapper = styled.div`
 `;
 
 export default function About() {
+  const { theme } = useContext(ThemeContext);
   return (
     <Content id="about-me">
-      <H2Wrapper>
+      <H2Wrapper theme={theme}>
         <h2>About Me</h2>
       </H2Wrapper>
       <p className="pad-bottom">

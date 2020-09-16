@@ -1,4 +1,8 @@
+import { useContext } from "react";
 import styled from "styled-components";
+
+// Context
+import ThemeContext from "../contexts/ThemeContext";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -8,12 +12,18 @@ const StyledHeader = styled.header`
   padding: 10rem 0 8rem 0;
   font-size: 3rem;
   font-weight: bold;
+  transition: all 0.5s ease-in;
   background: linear-gradient(
       var(--dark-highlight-transparent),
-      var(--dark-highlight)
+      ${(props) =>
+        props.theme === "light" ? "transparent" : "var(--background-color)"}
     ),
     url(https://res.cloudinary.com/the-classic-lunchbox/image/upload/v1599606608/mt-hood_vzifsl.png);
-  border-bottom: 4px solid var(--header-color);
+  border-bottom: 4px solid
+    ${(props) =>
+      props.theme === "light"
+        ? "var(--dark-highlight)"
+        : "var(--header-color)"};
 
   h1 {
     margin: 0;
@@ -61,8 +71,9 @@ const StyledHeader = styled.header`
 `;
 
 export default function Header() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <StyledHeader>
+    <StyledHeader theme={theme}>
       <h1 className="skewy">Tim Smith</h1>
       <p className="centered">Frontend Web Developer</p>
     </StyledHeader>

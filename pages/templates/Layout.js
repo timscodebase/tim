@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import styled from "styled-components";
 
 // Page Sections
@@ -5,6 +6,21 @@ import Footer from "../../PageSections/Footer";
 import Header from "../../PageSections/Header";
 import Nav from "../../PageSections/Nav";
 import Meta from "../../PageSections/Meta";
+
+// Context
+import ThemeContext from "../../contexts/ThemeContext";
+
+const Body = styled.div`
+  transition: all 0.5s ease-in;
+  color: ${(props) =>
+    props.theme === "light" ? "var(--dark-highlight)" : "var(--text-color)"};
+  background: linear-gradient(
+    100deg,
+    ${(props) =>
+      props.theme === "light" ? "rgb(190, 190, 190)" : "rgb(126, 126, 126)"},
+    ${(props) => (props.theme === "light" ? "rgb(80, 80, 80)" : "rgb(0, 0, 0)")}
+  );
+`;
 
 const Wrapper = styled.div`
   @media (min-width: 1001px) {
@@ -25,13 +41,16 @@ const Wrapper = styled.div`
 `;
 
 export default function Layout({ children }) {
+  const { theme } = useContext(ThemeContext);
   return (
-    <Wrapper>
-      <Meta />
-      <Nav />
-      <Header />
-      {children}
-      <Footer />
-    </Wrapper>
+    <Body theme={theme}>
+      <Wrapper>
+        <Meta />
+        <Nav />
+        <Header />
+        {children}
+        <Footer />
+      </Wrapper>
+    </Body>
   );
 }

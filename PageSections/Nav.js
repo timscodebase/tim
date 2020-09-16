@@ -24,7 +24,11 @@ const StyledNav = styled.div`
     left: 15px;
     background: transparent;
     font-size: 2.5rem;
-    color: var(--header-color);
+    transition: all 0.5s ease-in;
+    color: ${(props) =>
+      props.theme === "light"
+        ? "var(--dark-highlight)"
+        : "var(--header-color)"};
     padding: 1rem;
     border: 0;
     outline: 0;
@@ -58,7 +62,7 @@ export default function Nav() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <StyledNav>
+    <StyledNav theme={theme}>
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -67,7 +71,7 @@ export default function Nav() {
       >
         <motion.div className="background" variants={sidebar} />
         <Navigation toggle={() => toggleOpen()} />
-        <MenuToggle toggle={() => toggleOpen()} />
+        <MenuToggle theme={theme} toggle={() => toggleOpen()} />
         <button
           className="themeToggleBtn"
           onClick={() => {

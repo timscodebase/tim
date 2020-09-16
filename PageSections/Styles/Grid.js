@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Grid = styled.ul`
   display: grid;
+  margin: -15px;
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.25);
 

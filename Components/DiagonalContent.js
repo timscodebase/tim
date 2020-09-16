@@ -1,5 +1,9 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+// Context
+import ThemeContext from "../contexts/ThemeContext";
 
 const Diagonal = styled.div`
   display: flex;
@@ -9,13 +13,39 @@ const Diagonal = styled.div`
   padding: 1rem 0;
   margin: 0 -3rem 3rem -3rem;
   font-size: 2rem;
-  background-color: var(--dark-highlight);
-  border-top: 4px solid var(--header-color);
-  border-bottom: 4px solid var(--header-color);
+  transition: all 0.5s ease-in;
+  background-color: ${(props) =>
+    props.theme === "light" ? "rgba(0, 0, 0, 0.25)" : "var(--dark-highlight)"};
+  border-top: 4px solid
+    ${(props) =>
+      props.theme === "light"
+        ? "var(--dark-highlight)"
+        : "var(--header-color)"};
+  border-bottom: 4px solid
+    ${(props) =>
+      props.theme === "light"
+        ? "var(--dark-highlight)"
+        : "var(--header-color)"};
 
   .padding {
     width: 100%;
     padding: 0 1.5rem;
+  }
+
+  h2,
+  h3 {
+    transition: all 0.5s ease-in;
+    color: transparent;
+    background: linear-gradient(
+      135deg,
+      ${(props) =>
+        props.theme === "light" ? "rgb(200, 200, 200)" : "rgb(230, 176, 0)"},
+      ${(props) =>
+        props.theme === "light" ? "rgb(200, 200, 200)" : "rgb(211, 11, 0) 80%"}
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   @media (max-width: 500px) {
@@ -44,8 +74,9 @@ const Diagonal = styled.div`
 `;
 
 export default function DiagonalContent({ children, id }) {
+  const { theme } = useContext(ThemeContext);
   return (
-    <Diagonal>
+    <Diagonal theme={theme}>
       <div className="padding" id={id}>
         {children}
       </div>
