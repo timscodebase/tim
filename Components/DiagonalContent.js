@@ -15,14 +15,7 @@ const Diagonal = styled.div`
 
   .padding {
     width: 100%;
-    text-align: center;
     padding: 0 1.5rem;
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
   }
 
   @media (max-width: 500px) {

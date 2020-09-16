@@ -1,13 +1,35 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
 import { motion, useCycle } from "framer-motion";
+
+// Context
+import ThemeContext from "../contexts/ThemeContext";
+
+// Hooks
 import { useDimensions } from "../hooks/useDimensions";
-import MenuToggle from "./MenuToggle";
-import Navigation from "./Navigation";
+
+//Components
+import MenuToggle from "../Components/MenuToggle";
+import Navigation from "../Components/Navigation";
 
 const StyledNav = styled.div`
   position: absolute;
-  z-index: 3;
+  z-index: 999;
+
+  .themeToggleBtn {
+    position: relative;
+    top: 115px;
+    left: -70px;
+    color: var(--header-color);
+    background: transparent;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border: 0;
+    outline: 0;
+    user-select: none;
+  }
 `;
 
 const sidebar = {
@@ -33,6 +55,7 @@ export default function Nav() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <StyledNav>
@@ -46,6 +69,19 @@ export default function Nav() {
         <Navigation toggle={() => toggleOpen()} />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
+      <button
+        className="themeToggleBtn"
+        onClick={() => {
+          if (theme === "dark") setTheme("light");
+          if (theme === "light") setTheme("dark");
+        }}
+      >
+        {theme === "light" ? (
+          <FontAwesomeIcon icon={faMoon} />
+        ) : (
+          <FontAwesomeIcon icon={faSun} />
+        )}
+      </button>
     </StyledNav>
   );
 }

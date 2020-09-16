@@ -11,15 +11,7 @@ const StyledContent = styled.div`
   font-size: 2rem;
 
   div {
-    width: 100%;
-    text-align: center;
     padding: 0 3rem;
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
   }
 `;
 

@@ -7,19 +7,37 @@ body {
   margin: 0;
   color: var(--text-color);
   background-color: var(--background-color);
-  background: linear-gradient(100deg, rgb(70, 70, 70), rgb(0, 0, 0));
+  background: linear-gradient(100deg, rgb(126, 126, 126), rgb(0, 0, 0));
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 62.5%;
   overflow-x: hidden;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
 h1,
-h2 {
+h2,
+h3 {
   font-family: "PT+Serif", serif;
   display: block;
   color: transparent;
-  background: linear-gradient(135deg, rgb(230, 176, 0), rgb(255, 18, 6));
+  background: linear-gradient(135deg, rgb(230, 176, 0), rgb(211, 11, 0) 80%);
   font-weight: 400;
   background-clip: text;
   -webkit-background-clip: text;
@@ -40,8 +58,19 @@ h4 {
   margin-bottom: 0.5rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
 li {
   list-style: none;
+}
+
+ul {
+  margin: 0 -2rem;
 }
 
 .align-left {
@@ -50,60 +79,6 @@ li {
 
 .margin-bottom {
   margin-bottom: 2rem;
-}
-
-#projects > ul {
-  margin: 0 -2rem;
-}
-
-#projects > ul > li {
-  padding: 2rem;
-}
-
-.project-links {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
-  padding: 0 !important;
-  font-family: "PT+Serif", serif;
-  color: rgb(230, 176, 0);
-}
-
-.project-links > a {
-  text-decoration: dotted !important;
-}
-
-.project-links svg {
-  font-size: 1.5rem;
-  margin-right: 0.75rem;
-}
-
-.education-links {
-  text-align: center;
-  margin-top: 2rem;
-  padding: 0 !important;
-  font-family: "PT+Serif", serif;
-  color: var(--header-color);
-}
-
-.education-links > a {
-  text-decoration: dotted !important;
-}
-
-.education-links svg {
-  font-size: 1.5rem;
-  margin-right: 0.75rem;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 input,

@@ -1,9 +1,10 @@
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+// Page Sections
+import Footer from "../../PageSections/Footer";
+import Header from "../../PageSections/Header";
+import Nav from "../../PageSections/Nav";
+import Meta from "../../PageSections/Meta";
 
 const Wrapper = styled.div`
   @media (min-width: 1001px) {
@@ -26,6 +27,7 @@ const Wrapper = styled.div`
 export default function Layout({ children }) {
   return (
     <Wrapper>
+      <Meta />
       <Nav />
       <Header />
       {children}

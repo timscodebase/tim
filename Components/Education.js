@@ -5,6 +5,23 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 const StyledEducation = styled.li`
   padding: 1.5rem;
+
+  .education-links {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 !important;
+    font-family: "PT+Serif", serif;
+    color: var(--header-color);
+  }
+
+  a {
+    text-decoration: dotted !important;
+  }
+
+  svg {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+  }
 `;
 export default function Education({ desc, link, name }) {
   return (

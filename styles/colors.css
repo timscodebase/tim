@@ -3,5 +3,7 @@
   --text-color: rgba(200, 200, 200, 1);
   --header-color: rgb(230, 176, 0);
   --dark-highlight: rgb(21, 0, 37);
+  --dark-highlight-less-transparent: rgb(21, 0, 37, 0.8);
+  --dark-highlight-transparent: rgb(21, 0, 37, 0.5);
   --dark-transparent: rgba(21, 0, 37, 0.95);
 }
