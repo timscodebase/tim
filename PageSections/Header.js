@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
       ${(props) =>
         props.theme === "light" ? "transparent" : "var(--background-color)"}
     ),
-    url(https://res.cloudinary.com/the-classic-lunchbox/image/upload/v1599606608/mt-hood_vzifsl.png);
+    url(https://res.cloudinary.com/tihos/image/upload/e_auto_brightness/e_auto_contrast/e_auto_color,f_auto,q_auto/v1600282502/mt-hood_alawql.png);
   border-bottom: 4px solid
     ${(props) =>
       props.theme === "light"
@@ -41,7 +41,7 @@ const StyledHeader = styled.header`
       ${(props) =>
         props.theme === "light" ? "transparent" : "var(--background-color)"}
     ),
-      url(https://res.cloudinary.com/the-classic-lunchbox/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1599606608/mt-hood_vzifsl.png);
+      url(https://res.cloudinary.com/tihos/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1600282502/mt-hood_alawql.png);
     margin-top: -20%;
     transform: skewy(-8deg);
 
