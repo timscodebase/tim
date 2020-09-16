@@ -73,6 +73,7 @@ export default function Nav() {
         <Navigation toggle={() => toggleOpen()} />
         <MenuToggle theme={theme} toggle={() => toggleOpen()} />
         <button
+        aria-label="Toggle Theme"
           className="themeToggleBtn"
           onClick={() => {
             if (theme === "dark") setTheme("light");
