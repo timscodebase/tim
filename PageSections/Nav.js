@@ -19,12 +19,12 @@ const StyledNav = styled.div`
   z-index: 999;
 
   .themeToggleBtn {
-    position: relative;
-    top: 115px;
-    left: -70px;
-    color: var(--header-color);
+    position: fixed;
+    top: 50px;
+    left: 15px;
     background: transparent;
     font-size: 2.5rem;
+    color: var(--header-color);
     padding: 1rem;
     border: 0;
     outline: 0;
@@ -68,20 +68,20 @@ export default function Nav() {
         <motion.div className="background" variants={sidebar} />
         <Navigation toggle={() => toggleOpen()} />
         <MenuToggle toggle={() => toggleOpen()} />
+        <button
+          className="themeToggleBtn"
+          onClick={() => {
+            if (theme === "dark") setTheme("light");
+            if (theme === "light") setTheme("dark");
+          }}
+        >
+          {theme === "light" ? (
+            <FontAwesomeIcon icon={faMoon} />
+          ) : (
+            <FontAwesomeIcon icon={faSun} />
+          )}
+        </button>
       </motion.nav>
-      <button
-        className="themeToggleBtn"
-        onClick={() => {
-          if (theme === "dark") setTheme("light");
-          if (theme === "light") setTheme("dark");
-        }}
-      >
-        {theme === "light" ? (
-          <FontAwesomeIcon icon={faMoon} />
-        ) : (
-          <FontAwesomeIcon icon={faSun} />
-        )}
-      </button>
     </StyledNav>
   );
 }
