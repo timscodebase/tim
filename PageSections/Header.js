@@ -41,7 +41,7 @@ const StyledHeader = styled.header`
       ${(props) =>
         props.theme === "light" ? "transparent" : "var(--background-color)"}
     ),
-      url(https://res.cloudinary.com/tihos/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1600282502/mt-hood_alawql.png);
+      url(https://res.cloudinary.com/tihos/image/upload/c_scale,e_auto_brightness,f_auto,q_auto,w_800/e_auto_color/e_auto_contrast/v1600283971/mt-hood_zw5pzy.png);
     margin-top: -20%;
     transform: skewy(-8deg);
 
