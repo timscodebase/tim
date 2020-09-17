@@ -1,8 +1,23 @@
+import { useContext } from "react"
 import DiagonalContent from "../Components/DiagonalContent";
 import Grid from "./Styles/Grid";
 import Education from "../Components/Education";
+import styled from "styled-components";
+
+// Context
+import ThemeContext from "../contexts/ThemeContext";
+
+const StyledClass = styled.section`
+  .transparent-background {
+    color: var(--dark-highlight) !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+  }
+`;
 
 export default function Teachers() {
+  const { theme } = useContext(ThemeContext);
+  const isTransparent = theme === "light" ? "transparent-background" : "";
   return (
     <DiagonalContent key="education" id="education">
       <h2 className="skewy">Education</h2>
@@ -16,14 +31,14 @@ export default function Teachers() {
       </p>
       {MyTeachers.map(({ classes, teacher }) => {
         return (
-          <>
-            <h3 key={teacher}>{teacher}</h3>
+          <StyledClass>
+            <h3 className={isTransparent} key={teacher}>{teacher}</h3>
             <Grid>
               {classes.map(({ desc, id, link, name }) => (
                 <Education key={id} desc={desc} link={link} name={name} />
               ))}
             </Grid>
-          </>
+          </StyledClass>
         );
       })}
     </DiagonalContent>

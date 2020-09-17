@@ -22,6 +22,30 @@ const StyledFooter = styled.footer`
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+
+    .name,
+    .love {
+      display: grid;
+      justify-content: center;
+      
+    }
+
+    .name {
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    .love {
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 
   @media (max-width: 500px) {
@@ -32,11 +56,11 @@ const StyledFooter = styled.footer`
 export default function Footer() {
   return (
     <StyledFooter>
-      <div>
+      <div className="name">
         <p>Tim Smith &copy; {new Date().getFullYear()}</p>
       </div>
       <SocialLinks />
-      <div>
+      <div className="love">
         <p>
           Made with <FontAwesomeIcon icon={faHeart} />
         </p>

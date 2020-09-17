@@ -9,14 +9,14 @@ const H2Wrapper = styled.div`
   width: 270px;
   margin: 0 auto;
   padding: 1.5rem !important;
-  transition: all 0.5s ease-in;
+  
   background: ${(props) =>
     props.theme === "light" ? "transparent" : "var(--dark-highlight)"};
 
   h2 {
     margin: 0;
     color: transparent;
-    transition: all 0.5s ease-in;
+    
     background: linear-gradient(
       135deg,
       ${(props) =>

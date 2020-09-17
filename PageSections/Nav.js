@@ -24,7 +24,7 @@ const StyledNav = styled.div`
     left: 15px;
     background: transparent;
     font-size: 2.5rem;
-    transition: all 0.5s ease-in;
+    
     color: ${(props) =>
       props.theme === "light"
         ? "var(--dark-highlight)"

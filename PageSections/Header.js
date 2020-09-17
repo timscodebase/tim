@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
   padding: 10rem 0 8rem 0;
   font-size: 3rem;
   font-weight: bold;
-  transition: all 0.5s ease-in;
+  
   background: linear-gradient(
       var(--dark-highlight-transparent),
       ${(props) =>

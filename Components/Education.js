@@ -24,7 +24,7 @@ const StyledEducation = styled.li`
 
   h4 {
     color: transparent;
-    transition: all 0.5s ease-in;
+    
     background: linear-gradient(
       135deg,
       ${(props) =>
