@@ -4,7 +4,6 @@ import Layout from "./templates/Layout";
 import ThemeContext from "../contexts/ThemeContext";
 
 import "../styles/globals.css";
-import { initGA, logPageView } from "../lib/googleAnalytics"
 
 export default function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("dark");
@@ -12,12 +11,6 @@ export default function MyApp({ Component, pageProps }) {
   
 
   useEffect(() => {
-    // load google analytics
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView()
 
     // set theme based on time of day
     const startTime = "08:00:00";

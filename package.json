@@ -28,13 +28,10 @@
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-ga": "^3.1.2",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@sanity/client": "^1.150.7",
     "babel-plugin-styled-components": "^1.11.1",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "groq": "^1.150.1"
+    "eslint-plugin-react-hooks": "^4.1.2"
   }
 }
