@@ -13,7 +13,7 @@ const Diagonal = styled.div`
   padding: 1rem 0;
   margin: 0 -3rem 3rem -3rem;
   font-size: 2rem;
-  transition: all 0.5s ease-in;
+  
   background-color: ${(props) =>
     props.theme === "light" ? "rgba(0, 0, 0, 0.25)" : "var(--dark-highlight)"};
   border-top: 4px solid
@@ -34,7 +34,7 @@ const Diagonal = styled.div`
 
   h2,
   h3 {
-    transition: all 0.5s ease-in;
+    
     color: transparent;
     background: linear-gradient(
       135deg,
