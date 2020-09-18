@@ -1,6 +1,7 @@
 :root {
   --background-color: rgb(20, 20, 20, 1);
   --text-color: rgba(200, 200, 200, 1);
+  --text-color-transparent: rgba(200, 200, 200, 0.75);
   --header-color: rgb(230, 176, 0);
   --dark-highlight: rgb(21, 0, 37);
   --light-highlight: rgb(144, 0, 255);

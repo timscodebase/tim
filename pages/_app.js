@@ -43,11 +43,17 @@ export default function MyApp({ Component, pageProps }) {
   );
 }
 
-export function reportWebVitals(metric) {
-  console.log('====================================');
-  console.log('Tim Smith Site Metric');
-  console.log(metric);
-  console.log('====================================');
+// export function reportWebVitals(metric) {
   
-  metric.label === "web-vital" && console.log(metric);
+//   metric.label === "web-vital";
+// }
+
+export function reportWebVitals({ id, name, label, value }) {
+  ga("send", "event", {
+    eventCategory: `Next.js ${label} metric`,
+    eventAction: name,
+    eventValue: Math.round(name === "CLS" ? value * 1000 : value), // values must be integers
+    eventLabel: id, // id unique to current page load
+    nonInteraction: true, // avoids affecting bounce rate.
+  });
 }

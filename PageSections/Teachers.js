@@ -9,7 +9,10 @@ import ThemeContext from "../contexts/ThemeContext";
 
 const StyledClass = styled.section`
   .transparent-background {
-    color: var(--dark-highlight) !important;
+    width: 250px;
+    margin: 0 auto;
+    color: var(--text-color) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
     background-clip: initial !important;
     -webkit-text-fill-color: initial !important;
   }
@@ -31,7 +34,7 @@ export default function Teachers() {
       </p>
       {MyTeachers.map(({ classes, teacher }) => {
         return (
-          <StyledClass>
+          <StyledClass  key={teacher}>
             <h3 className={isTransparent} key={teacher}>{teacher}</h3>
             <Grid>
               {classes.map(({ desc, id, link, name }) => (

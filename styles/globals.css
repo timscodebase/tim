@@ -41,12 +41,6 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 
-.transparent-background {
-  color: var(--dark-highlight);
-  background-clip: initial;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
 h2 {
   font-size: 4.5rem;
 }

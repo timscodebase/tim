@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import styled from "styled-components";
 
 // Context
@@ -16,10 +16,11 @@ const StyledHeader = styled.header`
   background: linear-gradient(
       var(--dark-highlight-transparent),
       ${(props) =>
-        props.theme === "light" ? "transparent" : "var(--background-color)"}
+        props.theme === "light" ? "var(--text-color-transparent)" : "var(--background-color)"}
     ),
-    url(https://res.cloudinary.com/tihos/image/upload/e_auto_brightness/e_auto_contrast/e_auto_color,f_auto,q_auto/v1600282502/mt-hood_alawql.webp);
-  border-bottom: 4px solid
+      url(https://res.cloudinary.com/tihos/image/upload/c_scale,e_auto_brightness,f_auto,q_auto,w_800/e_auto_color/e_auto_contrast/v1600283971/mt-hood_zw5pzy.webp);
+      background-size: cover;
+      border-bottom: 4px solid
     ${(props) =>
       props.theme === "light"
         ? "var(--dark-highlight)"
@@ -39,11 +40,12 @@ const StyledHeader = styled.header`
     background: linear-gradient(
       var(--dark-highlight-transparent),
       ${(props) =>
-        props.theme === "light" ? "transparent" : "var(--background-color)"}
+        props.theme === "light" ? "var(--text-color-transparent)" : "var(--background-color)"}
     ),
-      url(https://res.cloudinary.com/tihos/image/upload/c_scale,e_auto_brightness,f_auto,q_auto,w_800/e_auto_color/e_auto_contrast/v1600283971/mt-hood_zw5pzy.webp);
+      url(https://res.cloudinary.com/tihos/image/upload/c_scale,e_auto_brightness,f_auto,q_auto,w_400/e_auto_color/e_auto_contrast/v1600283971/mt-hood_zw5pzy.webp);
     margin-top: -20%;
     transform: skewy(-8deg);
+    background-size: cover;
 
     p {
       transform: skewy(8deg);
@@ -73,6 +75,7 @@ const StyledHeader = styled.header`
 
 export default function Header() {
   const { theme } = useContext(ThemeContext);
+  
   return (
     <StyledHeader theme={theme}>
       <h1 className="skewy">Tim Smith</h1>
