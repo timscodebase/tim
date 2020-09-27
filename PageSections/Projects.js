@@ -1,6 +1,6 @@
-import DiagonalContent from "../Components/DiagonalContent";
-import Grid from "./Styles/Grid";
-import Project from "../Components/Project";
+import DiagonalContent from '../Components/DiagonalContent';
+import Grid from './Styles/Grid';
+import Project from '../Components/Project';
 
 export default function Projects() {
   return (
@@ -23,24 +23,24 @@ export default function Projects() {
 
 const MyProjects = [
   {
-    title: "Hellbonix",
+    title: 'Hellbonix',
     desc:
-      "A fun dictionary app I am building to keep track of the silly words my wife makes up.",
-    webLink: "https://hellbonix.netlify.app",
-    githubLink: "https://github.com/timscodebase/hellbonix",
+      'A fun dictionary app I am building to keep track of the silly words my wife makes up.',
+    webLink: '//hellbonix.netlify.app',
+    githubLink: '//github.com/timscodebase/hellbonix',
   },
   {
-    title: "United States COVID-19 Data",
+    title: 'United States COVID-19 Data',
     desc:
-      "A fun dictionary app I am building to keep track of the silly words my wife makes up.",
-    webLink: "https://us-covid-19-data.netlify.app/",
-    githubLink: "https://github.com/timscodebase/covid",
+      'A fun dictionary app I am building to keep track of the silly words my wife makes up.',
+    webLink: '//us-covid-19-data.netlify.app/',
+    githubLink: '//github.com/timscodebase/covid',
   },
   {
-    title: "Me and My Song",
+    title: 'Me and My Song',
     desc:
-      "A custom built Wordpress template for an SF Bay Area Singer/Song Writer",
-    webLink: "https://hellbonix.netlify.app",
-    githubLink: "https://github.com/timscodebase/hellbonix",
+      'A custom built Wordpress template for an SF Bay Area Singer/Song Writer',
+    webLink: '//meandmysong.com',
+    githubLink: '//github.com/timscodebase/hellbonix',
   },
 ];

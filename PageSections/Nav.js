@@ -1,18 +1,18 @@
-import { useContext, useRef } from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-regular-svg-icons";
-import { motion, useCycle } from "framer-motion";
+import { useContext, useRef } from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons';
+import { motion, useCycle } from 'framer-motion';
 
 // Context
-import ThemeContext from "../contexts/ThemeContext";
+import ThemeContext from '../contexts/ThemeContext';
 
 // Hooks
-import { useDimensions } from "../hooks/useDimensions";
+import { useDimensions } from '../hooks/useDimensions';
 
 //Components
-import MenuToggle from "../Components/MenuToggle";
-import Navigation from "../Components/Navigation";
+import MenuToggle from '../Components/MenuToggle';
+import Navigation from '../Components/Navigation';
 
 const StyledNav = styled.div`
   position: absolute;
@@ -20,15 +20,15 @@ const StyledNav = styled.div`
 
   .themeToggleBtn {
     position: fixed;
-    top: 50px;
+    top: 40px;
     left: 15px;
     background: transparent;
-    font-size: 2.5rem;
-    
+    font-size: 2.05rem;
+
     color: ${(props) =>
-      props.theme === "light"
-        ? "var(--dark-highlight)"
-        : "var(--header-color)"};
+      props.theme === 'light'
+        ? 'var(--dark-highlight)'
+        : 'var(--header-color)'};
     padding: 1rem;
     border: 0;
     outline: 0;
@@ -39,7 +39,7 @@ const StyledNav = styled.div`
 const sidebar = {
   open: (height = 1000) => ({
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 20,
       restDelta: 2,
     },
@@ -48,7 +48,7 @@ const sidebar = {
     zIndex: -3,
     transition: {
       delay: 0.5,
-      type: "spring",
+      type: 'spring',
       stiffness: 400,
       damping: 40,
     },
@@ -65,7 +65,7 @@ export default function Nav() {
     <StyledNav theme={theme}>
       <motion.nav
         initial={false}
-        animate={isOpen ? "open" : "closed"}
+        animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
       >
@@ -73,14 +73,14 @@ export default function Nav() {
         <Navigation toggle={() => toggleOpen()} />
         <MenuToggle theme={theme} toggle={() => toggleOpen()} />
         <button
-        aria-label="Toggle Theme"
+          aria-label="Toggle Theme"
           className="themeToggleBtn"
           onClick={() => {
-            if (theme === "dark") setTheme("light");
-            if (theme === "light") setTheme("dark");
+            if (theme === 'dark') setTheme('light');
+            if (theme === 'light') setTheme('dark');
           }}
         >
-          {theme === "light" ? (
+          {theme === 'light' ? (
             <FontAwesomeIcon icon={faMoon} />
           ) : (
             <FontAwesomeIcon icon={faSun} />

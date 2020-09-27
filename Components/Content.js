@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledContent = styled.div`
   display: flex;
@@ -9,6 +9,11 @@ const StyledContent = styled.div`
   padding: 1rem 0;
   margin: 0 -3rem 3rem -3rem;
   font-size: 2rem;
+
+  .red {
+    color: red;
+    font-size: 1.75rem;
+  }
 
   div {
     padding: 0 3rem;
