@@ -67,28 +67,31 @@ export default function About() {
       <H2Wrapper theme={theme}>
         <h2>About Me</h2>
       </H2Wrapper>
-      <p className="pad-bottom">
-        I am a Web Developer... sure. A damned good one! But there is
-        a lot more to me than my ability to build beautiful responsive
-        websites.
-      </p>
-      <p>
-        I feel the most at home in nature, specifically around water.
-        I am not a religious person pre say. I feel most connected
-        with my higher power, the greater connective force between us,
-        while floating in the ocean or other body of water or while
-        hiking anywhere in nature on a cool day. I love to walk. I
-        find it to be an excellent form of meditation and an efficient
-        way to rid myself of negative feelings and thoughts.
-      </p>
-      <p className="padding">
-        My passion in life is meeting new people and learning as much
-        as I can about the many things I love!{' '}
-        <span className="red">❤️</span> Every day, I find new
-        inspiring things that motivate me to keep moving forward and
-        to continue my search for my purpose. I believe that my Higher
-        Power put me on this Earth to learn and inspire people to love
-        life as I do.
+      <p className="section-description no-bottom-margin">
+        <p className="pad-bottom">
+          I am a Web Developer... sure. A damned good one! But there
+          is a lot more to me than my ability to build beautiful
+          responsive websites.
+        </p>
+        <p>
+          I feel the most at home in nature, specifically around
+          water. I am not a religious person pre say. I feel most
+          connected with my higher power, the greater connective force
+          between us, while floating in the ocean or other body of
+          water or while hiking anywhere in nature on a cool day. I
+          love to walk. I find it to be an excellent form of
+          meditation and an efficient way to rid myself of negative
+          feelings and thoughts.
+        </p>
+        <p className="padding">
+          My passion in life is meeting new people and learning as
+          much as I can about the many things I love!{' '}
+          <span className="red">❤️</span> Every day, I find new
+          inspiring things that motivate me to keep moving forward and
+          to continue my search for my purpose. I believe that my
+          Higher Power put me on this Earth to learn and inspire
+          people to love life as I do.
+        </p>
       </p>
     </Content>
   );
