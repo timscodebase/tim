@@ -1,12 +1,12 @@
 import DiagonalContent from '../Components/DiagonalContent';
-import Grid from './Styles/Grid';
+import Flex from './Styles/Flex';
 import Project from '../Components/Project';
 
 export default function Projects() {
   return (
     <DiagonalContent key="projects" id="projects">
       <h2 className="skewy">Projects</h2>
-      <Grid>
+      <Flex>
         {MyProjects.map(({ title, desc, webLink, githubLink }) => (
           <Project
             key={title}
@@ -16,7 +16,7 @@ export default function Projects() {
             githubLink={githubLink}
           />
         ))}
-      </Grid>
+      </Flex>
     </DiagonalContent>
   );
 }

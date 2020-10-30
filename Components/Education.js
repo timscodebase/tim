@@ -1,20 +1,23 @@
-import { useContext } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 // Context
-import ThemeContext from "../contexts/ThemeContext";
+import ThemeContext from '../contexts/ThemeContext';
 
 const StyledEducation = styled.li`
+  display: block;
   padding: 1.5rem;
+  flex: 0 1 600px;
+  margin: 5px;
 
   .education-links {
     text-align: center;
     margin-top: 2rem;
     padding: 0 !important;
-    font-family: "PT+Serif", serif;
+    font-family: 'PT+Serif', serif;
     color: var(--header-color);
   }
 
@@ -24,13 +27,17 @@ const StyledEducation = styled.li`
 
   h4 {
     color: transparent;
-    
+
     background: linear-gradient(
       135deg,
       ${(props) =>
-        props.theme === "light" ? "rgb(200, 200, 200)" : "rgb(230, 176, 0)"},
+        props.theme === 'light'
+          ? 'rgb(200, 200, 200)'
+          : 'rgb(230, 176, 0)'},
       ${(props) =>
-        props.theme === "light" ? "rgb(200, 200, 200)" : "rgb(211, 11, 0) 80%"}
+        props.theme === 'light'
+          ? 'rgb(200, 200, 200)'
+          : 'rgb(211, 11, 0) 80%'}
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -50,7 +57,11 @@ export default function Education({ desc, link, name }) {
       <p>{desc}</p>
       <div className="education-links">
         <FontAwesomeIcon icon={faExternalLinkAlt} />
-        <a href={link} target="_blank" rel="noopener noreferrer nofollow">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
           Learn more
         </a>
       </div>

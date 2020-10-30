@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import DiagonalContent from '../Components/DiagonalContent';
-import Grid from './Styles/Grid';
+import Flex from './Styles/Flex';
 import Education from '../Components/Education';
 import styled from 'styled-components';
 
@@ -38,7 +38,7 @@ export default function Teachers() {
   return (
     <DiagonalContent key="education" id="education">
       <h2 className="skewy">Education</h2>
-      <p>
+      <p className="section-description">
         I found Chris Coyier in the early 2000s. The treasure trove of
         articles, guides, and videos contained on{' '}
         <ExternalLink
@@ -69,7 +69,7 @@ export default function Teachers() {
             <h3 className={isTransparent} key={teacher}>
               {teacher}
             </h3>
-            <Grid>
+            <Flex>
               {classes.map(({ desc, id, link, name }) => (
                 <Education
                   key={id}
@@ -78,7 +78,7 @@ export default function Teachers() {
                   name={name}
                 />
               ))}
-            </Grid>
+            </Flex>
           </StyledClass>
         );
       })}
@@ -121,9 +121,9 @@ const MyTeachers = [
       {
         id: 5,
         desc:
-          'A free 25 video course on all there is to learn about CSS Grid! We start with CSS Grid fundamentals and end with some real-world examples.',
-        link: '//cssgrid.io/',
-        name: 'CSS Grid',
+          'A free 25 video course on all there is to learn about CSS Flex! We start with CSS Flex fundamentals and end with some real-world examples.',
+        link: '//cssFlex.io/',
+        name: 'CSS Flex',
       },
       {
         id: 6,
