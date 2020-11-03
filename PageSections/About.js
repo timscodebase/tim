@@ -1,9 +1,9 @@
-import { useContext } from 'react';
-import styled from 'styled-components';
-import Content from '../Components/Content';
+import { useContext } from 'react'
+import styled from 'styled-components'
+import Content from '../Components/Content'
 
 // Context
-import ThemeContext from '../contexts/ThemeContext';
+import ThemeContext from '../contexts/ThemeContext'
 
 const H2Wrapper = styled.div`
   width: 270px;
@@ -58,16 +58,16 @@ const H2Wrapper = styled.div`
       transform: skewy(2deg);
     }
   }
-`;
+`
 
 export default function About() {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
   return (
     <Content id="about-me">
       <H2Wrapper theme={theme}>
         <h2>About Me</h2>
       </H2Wrapper>
-      <p className="section-description no-bottom-margin">
+      <div className="section-description no-bottom-margin">
         <p className="pad-bottom">
           I am a Web Developer... sure. A damned good one! But there
           is a lot more to me than my ability to build beautiful
@@ -92,7 +92,7 @@ export default function About() {
           Higher Power put me on this Earth to learn and inspire
           people to love life as I do.
         </p>
-      </p>
+      </div>
     </Content>
-  );
+  )
 }

@@ -1,26 +1,30 @@
-import { useContext } from "react";
-import styled from "styled-components";
+import { useContext } from 'react'
+import styled from 'styled-components'
 
 // Page Sections
-import Footer from "../../PageSections/Footer";
-import Header from "../../PageSections/Header";
-import Nav from "../../PageSections/Nav";
-import Meta from "../../PageSections/Meta";
+import Footer from '../../PageSections/Footer'
+import Header from '../../PageSections/Header'
+import Nav from '../../PageSections/Nav'
+import Meta from '../../PageSections/Meta'
 
 // Context
-import ThemeContext from "../../contexts/ThemeContext";
+import ThemeContext from '../../contexts/ThemeContext'
 
 const Body = styled.div`
-  
   color: ${(props) =>
-    props.theme === "light" ? "var(--dark-highlight)" : "var(--text-color)"};
+    props.theme === 'light'
+      ? 'var(--dark-highlight)'
+      : 'var(--text-color)'};
   background: linear-gradient(
     100deg,
     ${(props) =>
-      props.theme === "light" ? "rgb(190, 190, 190)" : "rgb(126, 126, 126)"},
-    ${(props) => (props.theme === "light" ? "rgb(160, 160, 160)" : "rgb(0, 0, 0)")}
+      props.theme === 'light'
+        ? 'rgb(190, 190, 190)'
+        : 'rgb(126, 126, 126)'},
+    ${(props) =>
+      props.theme === 'light' ? 'rgb(160, 160, 160)' : 'rgb(0, 0, 0)'}
   );
-`;
+`
 
 const Wrapper = styled.div`
   @media (min-width: 1001px) {
@@ -38,10 +42,10 @@ const Wrapper = styled.div`
   @media (max-width: 500px) {
     width: 100%;
   }
-`;
+`
 
 export default function Layout({ children }) {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext)
   return (
     <Body theme={theme}>
       <Wrapper>
@@ -52,5 +56,5 @@ export default function Layout({ children }) {
         <Footer />
       </Wrapper>
     </Body>
-  );
+  )
 }

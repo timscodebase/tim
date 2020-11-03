@@ -1,14 +1,14 @@
-import ContactForm from "../Components/ContactForm";
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import About from "../PageSections/About";
-import Teachers from "../PageSections/Teachers";
-import Projects from "../PageSections/Projects";
+import About from '../PageSections/About'
+import Contact from '../PageSections/Contact'
+import Teachers from '../PageSections/Teachers'
+import Projects from '../PageSections/Projects'
 
 const MainContent = styled.section`
   font-size: 2rem;
   padding: 3rem;
-`;
+`
 
 export default function Home() {
   return (
@@ -18,8 +18,9 @@ export default function Home() {
           <About />
           <Projects />
           <Teachers />
+          <Contact />
         </MainContent>
       </main>
     </>
-  );
+  )
 }
