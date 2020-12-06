@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import * as gtag from '../lib/gtag'
 
 import Layout from './templates/Layout'
@@ -9,6 +9,17 @@ import '../styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('dark')
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   useEffect(() => {
     // set theme based on time of day
@@ -31,17 +42,9 @@ export default function MyApp({ Component, pageProps }) {
       setTheme('light')
     }
 
-    // gtag
-    const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    Router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      Router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [])
-
-  const context = { theme, setTheme }
+    const context = { theme, setTheme }
+  })
+    
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <Layout>

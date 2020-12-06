@@ -10,6 +10,11 @@ body {
     Helvetica Neue, sans-serif;
   font-size: 62.5%;
   overflow-x: hidden;
+  background-color: linear-gradient(
+    100deg,
+    rgb(126, 126, 126),
+    rgb(0, 0, 0)
+  );
 }
 
 *,
