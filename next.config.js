@@ -24,5 +24,5 @@ module.exports = withOffline({
 })
 
 module.exports = {
-  target: 'serverless',
+  target: 'experimental-serverless-trace',
 }
