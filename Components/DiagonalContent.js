@@ -34,10 +34,6 @@ const Diagonal = styled.div`
     padding: 0 1.5rem;
   }
 
-  .section-description {
-    margin: 0 110px 50px 110px;
-  }
-
   h2,
   h3 {
     color: transparent;

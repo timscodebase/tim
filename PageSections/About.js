@@ -9,11 +9,10 @@ const H2Wrapper = styled.div`
   width: 270px;
   margin: 0 auto;
   padding: 1.5rem !important;
-
   background: ${(props) =>
     props.theme === 'light'
       ? 'transparent'
-      : 'var(--dark-highlight)'};
+    : 'var(--dark-highlight)'};
 
   h2 {
     margin: 0;
@@ -68,12 +67,12 @@ export default function About() {
         <h2>About Me</h2>
       </H2Wrapper>
       <div className="section-description no-bottom-margin">
-        <p className="pad-bottom">
+        <p className="top-padding padding under-pad">
           I am a Web Developer... sure. A damned good one! But there
           is a lot more to me than my ability to build beautiful
           responsive websites.
         </p>
-        <p>
+        <p className="padding under-pad">
           I feel the most at home in nature, specifically around
           water. I am not a religious person pre say. I feel most
           connected with my higher power, the greater connective force
@@ -83,7 +82,7 @@ export default function About() {
           meditation and an efficient way to rid myself of negative
           feelings and thoughts.
         </p>
-        <p className="padding">
+        <p className="padding pad-bottom under-pad">
           My passion in life is meeting new people and learning as
           much as I can about the many things I love!{' '}
           <span className="red">❤️</span> Every day, I find new
