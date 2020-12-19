@@ -18,6 +18,12 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <script
+            data-ad-client="ca-pub-3189326528459169"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
+
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
