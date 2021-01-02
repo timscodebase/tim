@@ -12,15 +12,13 @@ const MainContent = styled.section`
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <MainContent>
-          <About />
-          <Projects />
-          <Teachers />
-          <Contact />
-        </MainContent>
-      </main>
-    </>
+    <main>
+      <MainContent>
+        <About />
+        <Projects />
+        <Teachers />
+        <Contact />
+      </MainContent>
+    </main>
   )
 }
